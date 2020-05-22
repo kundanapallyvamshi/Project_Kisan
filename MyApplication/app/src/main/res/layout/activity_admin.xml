@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/holo_orange_light"
+    tools:context="com.example.myapplication.admin">
+
+    <EditText
+        android:id="@+id/sub"
+        android:layout_width="294dp"
+        android:layout_height="60dp"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="130dp"
+        android:ems="10"
+        android:hint="Substation ID"
+        android:inputType="textPersonName"
+        android:textSize="24sp"
+        tools:layout_editor_absoluteX="45dp"
+        tools:layout_editor_absoluteY="157dp" />
+
+    <EditText
+        android:id="@+id/pass"
+        android:layout_width="297dp"
+        android:layout_height="63dp"
+        android:ems="10"
+        android:hint="Password"
+        android:inputType="textPassword"
+        android:textSize="24sp"
+        tools:layout_editor_absoluteX="44dp"
+        tools:layout_editor_absoluteY="254dp"
+        android:layout_centerVertical="true"
+        android:layout_alignStart="@+id/sub"
+        android:layout_alignLeft="@+id/sub" />
+
+    <Button
+        android:id="@+id/button3"
+        style="@android:style/Widget.Button.Inset"
+        android:layout_width="140dp"
+        android:layout_height="30dp"
+        android:layout_below="@+id/pass"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="39dp"
+        android:background="@drawable/round"
+        android:backgroundTint="@android:color/holo_blue_light"
+        android:elevation="4dp"
+        android:fontFamily="serif"
+        android:onClick="fly"
+        android:text="Login"
+        android:textStyle="bold"
+        tools:layout_editor_absoluteX="136dp"
+        tools:layout_editor_absoluteY="342dp" />
+
+    <Button
+        android:id="@+id/loginasnew"
+        style="@style/Widget.AppCompat.Button.Borderless"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignEnd="@+id/sub"
+        android:layout_alignStart="@+id/pass"
+        android:layout_below="@+id/button3"
+        android:layout_marginTop="36dp"
+        android:text="Login As New User"
+        android:layout_alignRight="@+id/sub"
+        android:layout_alignLeft="@+id/pass" />
+
+</RelativeLayout>

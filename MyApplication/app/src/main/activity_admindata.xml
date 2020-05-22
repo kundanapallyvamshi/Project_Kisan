@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/button6"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/holo_orange_light"
+    tools:context="com.cme.krishimithra.admindata">
+
+    <EditText
+        android:id="@+id/newid"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:hint="New ID"
+        android:inputType="number"
+        android:textSize="24sp"
+        android:layout_marginTop="72dp"
+        android:layout_alignParentTop="true"
+        android:layout_alignStart="@+id/admin_number" />
+
+    <EditText
+        android:id="@+id/password"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:hint="Password"
+        android:inputType="textPassword"
+        android:textSize="24sp"
+        android:layout_centerVertical="true"
+        android:layout_alignStart="@+id/admin_number" />
+
+    <Button
+        android:id="@+id/button8"
+        android:layout_width="150dp"
+        android:layout_height="30dp"
+        android:background="@drawable/round"
+        android:backgroundTint="@android:color/holo_blue_light"
+        android:fontFamily="serif"
+        android:text="Submit"
+        android:textStyle="bold"
+        android:layout_marginTop="46dp"
+        android:layout_below="@+id/password"
+        android:layout_centerHorizontal="true" />
+
+    <EditText
+        android:id="@+id/admin_number"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:hint="Mobile"
+        android:inputType="phone"
+        android:textSize="24sp"
+        android:layout_marginTop="31dp"
+        android:layout_below="@+id/newid"
+        android:layout_centerHorizontal="true" />
+
+</RelativeLayout>

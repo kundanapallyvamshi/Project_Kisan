@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/holo_blue_light"
+    tools:context="com.example.myapplication.admin_control_panel">
+
+
+    <ToggleButton
+        android:id="@+id/toggleButton"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="58dp"
+        android:background="@drawable/round"
+        android:backgroundTint="@android:color/holo_orange_light"
+        android:text="ToggleButton" />
+
+    <TextView
+        android:id="@+id/textView6"
+        android:layout_width="300dp"
+        android:layout_height="150dp"
+        android:layout_alignStart="@+id/toggleButton"
+        android:layout_below="@+id/toggleButton"
+        android:layout_marginTop="29dp"
+        android:background="@drawable/round"
+        android:textAlignment="center"
+        android:textColor="@android:color/holo_red_dark"
+        android:textSize="40sp"
+        android:layout_alignLeft="@+id/toggleButton" />
+
+    <TextView
+        android:id="@+id/textView7"
+        android:layout_width="300dp"
+        android:layout_height="50dp"
+        android:background="@android:color/background_light"
+        android:layout_below="@+id/editText"
+        android:layout_alignStart="@+id/textView6"
+        android:layout_alignLeft="@+id/textView6" />
+
+    <Button
+        android:id="@+id/button9"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/round"
+        android:backgroundTint="@android:color/holo_orange_light"
+        android:text="Search"
+        android:textStyle="bold"
+        android:layout_below="@+id/textView7"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="22dp" />
+
+    <EditText
+        android:id="@+id/editText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignEnd="@+id/textView7"
+        android:layout_alignStart="@+id/textView7"
+        android:layout_below="@+id/textView6"
+        android:layout_marginTop="21dp"
+        android:ems="10"
+        android:hint="Number"
+        android:inputType="textPersonName"
+        android:textStyle="bold"
+        android:layout_alignRight="@+id/textView7"
+        android:layout_alignLeft="@+id/textView7" />
+
+</RelativeLayout>
