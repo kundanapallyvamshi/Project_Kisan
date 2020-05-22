@@ -1,0 +1,258 @@
+
+1. Introduction         
+ 
+1.1 Problem Definition including the significance and objective
+                                    
+Project Kisan is the system developed for the farmers and the substation workers. The system includes software and hardware, software part is an android application, from where farmer will be operating the agriculture equipment. Operating in the sense switching the motor and a special device to eradicate the usage of the insecticides. The system is completely offline; hence it is pretty good for using from anywhere in the world.  
+The hardware module connected to the motor and insect trapper will be receiving commands from the application will be compared with the commands defined in microcontroller, and then particular operation will be performed. Substation will be treated as admin where the bill of each and every farmer will be maintained in bunch. 
+ In case of any accidents occurred at the farms notification will be generated to substation, the person at substation will take the precautions to avoid the mass damage to the electrical equipment to that particular location. 
+
+Purpose 
+ The purpose of developing this system is to avoid the farmers’ death due to short circuits at the field, going to farms for operating agriculture equipment and spraying insecticides will be decreased to maximum extent. As the equipment is attached with the sensors it will decrease the power consumption where the microcontroller will never allow the motor to run even after the water level is low. Another important purpose of the system is over all details of the power consumption will be maintained at firebase which is further displayed to the farmer and the admin, the complete status of the equipment will be monitored. 
+
+1.2 Methodologies: 	
+1.2.1 Existing system: 
+There are three different existing systems for operating the agriculture equipment. 
+Manual operating: 
+ In this type of operating the farmer need to go to the farm for switching the motor. At any cost the farmers need to be there while operating the devices and farmer must be watching the status of the water flow to the field. If the farmer has any important work for that session either farmer need to leave the work or the farm must be left without water, this shows the huge impact on the farmer as farmer is working for field so farmer need to go to the field. If the power supply has irregular timings the farmer need to wait at the farm until the power has come. In case any of the devices are short circuited the farmer will be died due to the shock this was the major problem which rapidly occurring now-a-days. 
+Disadvantages of manual operating: 
+•	Accidents due to short circuits : 
+Many of the people are died due to short circuits and it is still continuing as a culture. The farmer may be the head of his family; many of the families are coming on to the roads. Sometimes the total family may go for suicides this was the major problem which is happening for the farmer’s life. 
+•	Irregular power supply  : 
+The farmers need to be very much patient while coming to the power supply, because the electricity department will never give particular information regarding the power supply, if the power supply given at nights the formers need to leave the home for nights to the farm for operating the agriculture equipment.  
+Automatic starter is one of the ways of operating the 3phase motors but all the farmers may not use the starters which will cause frequential damage to the equipment.
+ All the motors may or may not switch automatically. In some cases, the farmers will never allow water to the farm but the starter will automatically switch the motor and then the water will be supplied to the farm, this will lead to the loss of total crop of the filed ultimately the farmer will get the loss in maximum extent.
+•	Disadvantages of automatic starter : 
+ The starter can only be applied to motors where the six leads or terminals can be accessed. The supply voltage must be the same as the rated motor voltage for Delta connection. Because the starting current is reduced to approximately one-third of the rated current, the starting torque is also reduced to one-third. If the motor does not reach at least 90% of its rated speed at the time of switching from Star to Delta the current peak will be as high as in a D.O.L. start, thus causing harmful effects to the contacts of the contactors and the connection system brings no advantage to the electrical system. 
+•	Operating by GSM   : - 
+In past few years there is a rapid growth in this system. The user communicates with the centralized unit through SMS. The centralized unit communicates with the system through SMS which will be received by the GSM with the help of the SIM card. The GSM sends this data to ARM7which is also continuously receives the data from sensors in some form of codes. After processing, this data is displayed on the LCD. Thus, in short whenever the system receives the activation command from the subscriber it checks all the field conditions and gives a detailed feedback to the user and waits for another activation command to start the motor. 
+The motor is controlled by a simple manipulation in the internal structure of the starter. The starter coil is indirectly activated by means of a transistorized relay circuit. When the motor is started, a constant monitoring on soil moisture and water level is done & once the soil moisture is reached to enough level the motor is automatically turned off & a massage is send to subscriber that the motor is turned off. 
+The water level indicator indicates three levels low, medium, high and also empty tank. Shen etc. al (2007) introduced a GSM-SMS remote measurement and control system for greenhouse based on PC based database system connected with base station. Base station is developed by using a microcontroller, GSM module, sensors and actuators. In practical operation, the central station receives and sends messages through GSM module. Criterion value of parameters to be measured in every base station is set by central station, and then in base stations parameters including the air temperature, the air humidity. Indus etc. al (2013) mainly focuses on reviews in the field of remote monitoring and control, the technology used and their potential advantages. 
+The paper proposes an innovative GSM/Bluetooth based remote controlled embedded system for irrigation. The system sets the irrigation time depending on the temperature and humidity reading from sensors and type of crop and can automatically irrigate the field when unattended. Information is exchanged between far end and designed system via SMS on GSM network. A Bluetooth module is also interfaced with the main microcontroller chip which eliminates the SMS charges when the user is within the limited range of few meters to the designated system. 
+The system informs users about many conditions like status of electricity, dry running motor, increased temperature, water content in soil and smoke via SMS on GSM network or by Bluetooth. 
+The GSM based irrigation system may offer users the flexibility to regulate and control the operations of their irrigation systems with little intervention to reduce runoff from over watering for improvement in crop yield. This enables users to take advantage of the globally deployed GSM networks with its low SMS service cost to use mobile phones and simple SMS commands to manage their irrigation system. It will be possible for users to use SMS to monitor directly the conditions of their farmland, schedule the water 
+
+Disadvantages of operating using GSM  :
+•	The farmer may not be aware of the commands. 
+•	Farmer may be or may not know the sending of SMS. 
+•	Issues may arise with technical issues. 
+•	Sometimes there may be a chance of failed in sending the SMS. 
+•	Not much user interface. 
+•	Cost effective in case of hardware errors in the device. 
+•	Power wastage if water level is low. 
+In case the field is completely spread with water, the power and water will be wasted as the power will never switched to off even though the water supply is completed to the field.  
+  
+1.2.2 Proposed system :
+The new system in this project propose is, controlling the overall agriculture equipment from an android application which is specially developed for farmers’ usage; the system includes the hardware device which is similar to the GSM based operating of agriculture equipment. This device will receive the commands from the user and performs particular task. 
+These commands will be send automatically from the application when an event occurs such as clicking the button of motor to on or switching the button of motor to off. The application has two important modules in which one part will dealing with the admin and the other part will be used by the farmer for operating the devices. The admin will maintain all the details of the farmers through firebase, which is the universal database for both farmers and admins.
+ If any accident occurs at the farm the microcontroller of the hardware device will generate the SMS to the farmer, in the farmer application the location of the device where farmer going to place will be read on receiving particular message the location will be redirected to the substation under whom farmer already registered. This will never allow the substation to be idle when any fire accident occurs. Another important part of the application is billing. The amount of power consumed will be calculated at the farm based on the pulse of the energy meter when the command regarding in switching the motor to off send the calculated amount of power to the farmer there the units will be calculated with money and will be displayed at farmers activity.
+ If the water level is low the motor is automatically switched to off the SMS regarding the water level will be generated to the farmer on receiving the message three buttons on the application will get activated, these buttons resembles the scheduling time where the farmer will reschedule the motor to switch after a particular time. 
+The other device which will be operated the farmer is insect trapper the trapper will attract the insect once the insects enters the module will be killed hence insecticides usage will be decreased 
+ 
+Advantages: 
+•	The farmers are not required at the farm. 
+•	Accidents will be completely eradicated. 
+•	Water wastage will be decreased. 
+•	Power wastage will have kept to minimum extent. 
+•	Motors will be operated from anywhere. 
+•	Motor can be rescheduled based on water level.  
+•	Insecticides usage will be eradicated. 
+•	Commands will be generated automatically so any farmer can easily use. 
+•	Farmers have no requirement to remember the commands. 
+•	Bills can be checked on their devices. 
+•	Substation will keep on sending the updates to the farmer will increase the speed of responding for an issue caused at field. 
+•	Application is very much easy to use. 
+•	Trapper will kill all the insects and automatically flushes them out. 
+
+1.3 Scope of the project
+The scope of the project is the system on which the software is installed, i.e. the project is developed as an android application, and it will work for all the farmers those who install the device along with android application. Substation workers can also use this application such that all the details of the farmer’s bill and status of the equipment will be maintained at the admin. This will increase the communication between the farmer and the electricity department as well. 
+          As the communication between the farmers and electricity department brought to the maximum extent at any situation the farmer will be notified by the substation about the bill or the timings of the power supply or any other details such that the government will easily identify each and every farmer and will very much easy to solve the problem at the farm in electrical equipment in spite of finding for the problems at different places. 
+
+1.4 Organization of the report
+	Chapter 1 includes introduction to our project with existing and proposing system. Chapter 2 includes the domain on which in this project are working on to develop our idea. Chapter 3 includes design for our model. Chapter 4 deals implementation of the proposed system that includes algorithm and testing. Chapter 5 deals about the results on our proposed system. Chapter 6 includes conclusions and references to develop project.
+
+
+
+
+
+2.Literature survey
+2.1 Introduction to problem domain terminology
+The Internet of things (IoT) is a system of interrelated computing devices, mechanical and digital machines provided with unique identifiers (UIDs) and the ability to transfer data over a network without requiring human-to-human or human-to-computer interaction. 
+The definition of the Internet of things has evolved due to the convergence of multiple technologies, real-time analytics, machine learning, commodity sensors, and embedded systems. Traditional fields of embedded systems, wireless sensor networks, control systems, automation (including home and building automation), and others all contribute to enabling the Internet of things. In the consumer market, IoT technology is most synonymous with products pertaining to the concept of the "smart home", covering devices and appliances (such as lighting fixtures, thermostats, home security systems and cameras, and other home appliances) that support one or more common ecosystems, and can be controlled via devices associated with that ecosystem, such as smartphones and smart speakers.
+There are a number of serious concerns about dangers in the growth of IoT, especially in the areas of privacy and security, and consequently industry and governmental moves to begin to address these.
+	2.2 Existing system
+			Smart Irrigation
+Automatic and smart care of plants by proper watering and their monitoring.
+		Hardware components
+•	Express if Demos D1 Mini
+•	Infineon Cool MOS C7 Gold SJ MOSFET
+•	Adafruit Waterproof DS18B20 Digital temperature sensor
+•	Spark Fun Soil Moisture Sensor (with Screw Terminals)
+Hand tools and fabrication machines
+•	Soldering iron (generic)
+Result : Effective monitoring and smart care of plants by proper watering 
+2.2.1 Proposed system
+Hardware Requirements
+	RAM of 512MB in the Android device
+To the android application in the mobile it is minimum requirement to have   RAM of 512 MB, such that the application can be easily operated. 
+Computer for developing application. 
+	  		In this project need a computer develop the android application.   
+Electronics tool kit to develop the device. 
+The device KISAN is developed by an electrician.
+Microcontroller. 
+To perform the operations in spectacular manner microcontroller is used, microcontroller will be dumped with the code it will perform operations based on that code. 
+PCB. 
+Printed Circuit Board is the key element where the electronic device required is built on it. 
+Chip. 
+ 		It is one of the requirements for the device for particular operation.  
+Sensors. 
+Sensors are placed for complete status monitoring of the equipment. 
+GSM module 
+Key element of the device where all the commands from the application will be send to SIM which is placed in the GSM module microcontroller will further read these commands which are received by the GSM. 
+Relays
+Motor is operated by the microcontroller where the switches called relays are operated by microcontrollers. These switches are used as the switches for the motor and trapper device. 
+Water tin
+This is used in making the special device called trapper. 
+Light bulb 
+   		Used for attracting the insects. 
+Dynamo
+Used for running the fans for flushing out the material from the module.
+Repellant 	
+Placed inside the trapper for killing insects. 
+Power cables 
+For power supply. 	
+Submersible motor 
+Motor for demonstration purpose. 
+Resistors 
+Used in the circuit. 
+Capacitors. 
+Used in the circuit for filtering the current. 
+Regulators. 
+Used in maintain the equal voltage supply to the microcontroller. 
+Heat sinks. 
+Used to absorb the heat evolved from the regulator. 
+LED. 
+For indication of power supply on. 
+10RPM motor.  
+Used for automated gate of insect trapper. 
+Insecticides.
+Filled in the repellant for killing the insects in the module  
+Software Requirement
+Android operating system 
+The android device must have the minimum version of the android operating system. And the version while developing the app must be compatible with all the least versioned devices. 
+Android studio 
+It is an IDE for developing android application. 
+Firebase 
+Firebase is the open source software society which provides some features inbuilt for android application which is developed in Android Studio this is feature is adapted in our application. 
+Kiel vision 
+IDE for developing embedded c programs for microcontrollers. 
+PROG ISP
+Software used for dumping the c program in the microcontroller. 
+Android
+Android is the new language developed for android applications.
+Java, PicsArt & Xml 
+Java is the backend code language used for developing android App. Xml is also the backend code script for parsing and for overall schema 
+	2.3 Related works 
+The ‘Smart Fault Preventer and Irrigation Controller’ lets farmers irrigate their farms automatically, handles high voltage power and also manages electricity fluctuations – all in one go!
+•	Angarika gogoi
+•	October 18, 2019
+•	Agriculture startup
+3. Design
+3.1 Block diagram
+ 
+All users are connected to firebase database and microcontroller plays main function in this project.
+
+
+3.1.1 Architecture 
+
+ 
+
+
+The above architecture describes the functionality of the project i.e., farmer panel with functions to operate all the equipment’s in the field.
+
+
+
+
+
+
+
+4. Implementation of the proposed system
+4.1 ER diagram
+ 
+In this project there are three schemas that is used to store all the action data by farmer and admin.
+4.1.1 Data flow diagram
+4.2. Testing :
+Testing the application.
+As app expands, you might find it necessary to fetch data from a server, interact with the device's sensors, access local storage, or render complex user interfaces. The versatility of your app demands a comprehensive testing strategy. 
+When developing a feature iteratively, you start by either writing a new test or by adding cases and assertions to an existing unit test. The test fails at first because the feature isn't implemented yet. 
+It's important to consider the units of responsibility that emerge as you design the new feature. For each unit, you write a corresponding unit test. Your unit tests should nearly exhaust all possible interactions with the unit, including standard interactions, invalid inputs, and cases where resources aren't available. iterative, test-driven development 
+The full workflow, as shown in figure, contains a series of nested, iterative cycles where a long, slow, UI-driven cycle tests the integration of code units. You test the units themselves using shorter, faster development cycles. This set of cycles continues until your app satisfies every use case. 
+Understand the Testing Pyramid 
+ 
+  
+The Testing Pyramid, showing the three categories of tests that you should include in your app's test suite 
+The Testing Pyramid, shown in Figure 2, illustrates how your app should include the three categories of tests: small, medium, and large: 
+Small tests are unit tests that you can run in isolation from production systems. They typically mock every major component and should run quickly on your machine. 
+Medium tests are integration tests that sit in between small tests and large tests. They integrate several components, and they run on emulators or real devices. 
+Large tests are integration and UI tests that run by completing a UI workflow. They ensure that key end-user tasks work as expected on emulators or real devices. 
+Although small tests are fast and focused, allowing you to address failures quickly, they're also low-fidelity and self-contained, making it difficult to have confidence that a passing test allows your app to work. You encounter the opposite set of tradeoffs when writing large tests. 
+Because of the different characteristics of each test category, you should include tests from each layer of the test pyramid. Although the proportion of tests for each category can vary based on your app's use cases, in this project generally recommend the following split among the categories: 70 percent small, 20 percent medium, and 10 percent large. 
+
+
+
+
+
+
+
+
+
+5. Results
+5.1 Output screens
+  	                              	
+          1. Start                                       2. welcome
+ 	                  
+    3. Farmer Panel                              4. Admin Panel
+   		     
+        5. Motor On                                           6. Light On
+
+
+
+
+
+
+
+
+
+
+
+6. Conclusions
+	The main intention of the project is to introduce the technology to the farmers and providing the knowledge to build the technology with various tools we use as in this project GSM is used to operate equipments.
+6.1 Limitations
+•	The farmer must be minimum educated. 
+•	Android mobile required. 
+•	Cost effective for small scale farmers. 
+6.2 Future scope
+•	Farmer shopping
+•	Online billing 
+•	Online loan applying
+
+
+
+
+
+
+
+
+
+
+
+
+
+References
+	https://en.wikipedia.org/wiki/Internet_of_things
+	https://www.youtube.com/watch?v=wqraxBVwF70
+	https://developer.android.com/guide
+https://www.postscapes.com/internet-of-things-protocols/  https://www.cse.wustl.edu/~jain/cse570-15/ftp/iot_prot/
+Internet of things :
+- ArshdeepBahga, Vijay Madisetti, Internet of Things: A hands on approach, 2014, VPT publishers.
+
